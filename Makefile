@@ -9,3 +9,7 @@ publish: #poetry publish для отладки
 
 package-install: #устанвока пакета в пользовательское окружение
 	python3 -m pip install --user dist/*.whl
+
+lint: #проверяет линтером brain_games
+	poetry run flake8 brain_games
+
