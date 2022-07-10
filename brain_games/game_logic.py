@@ -13,13 +13,20 @@ def fail(answer, correct, name):
     print(f"Let's try again, {name}!")
 
 
-def game_logic(condition, func_question, func_answer):
+def game_logic(condition, func_question):
+    """
+    Parameters:
+    condition (str): condition for game
+    func_question (function): should return question, answer
+
+    Return:
+    None, realise game
+    """
     name = ask_name()
     print(condition)
     count = 0
     while count < 3:
-        question = func_question()
-        correct_answ = func_answer(question)
+        question, correct_answ = func_question()
         print(f'Question: {question}')
         answer = input('Your answer: ')
         if correct_answ == answer:

@@ -14,11 +14,12 @@ def check_answer(question):
 
 
 def question():
-    return randint(0, 101)
+    question = randint(0, 99)
+    return question, check_answer(question)
 
 
 def main():
-    game_logic(condition, question, check_answer)
+    game_logic(condition, question)
 
 
 if __name__ == "__main__":
