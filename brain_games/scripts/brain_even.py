@@ -1,6 +1,9 @@
 #!/usr/bit/env python3
 from random import randint
-import prompt
+from brain_games.game_logic import game_logic
+
+
+condition = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def check_answer(question):
@@ -10,30 +13,12 @@ def check_answer(question):
         return 'no'
 
 
-def correct_answer(answer, correct):
-    print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+def question():
+    return randint(0, 101)
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    count = 0
-    while count < 3:
-        question = randint(0, 101)
-        print(f'Question: {question}')
-        answer = input('Your answer: ')
-        correct_answ = check_answer(question)
-        if correct_answ == answer:
-            print('Correct!')
-            count += 1
-        else:
-            correct_answer(answer, correct_answ)
-            print(f"Let's try again, {name}!")
-            break
-    if count == 3:
-        print(f'Congratulations, {name}!')
+    game_logic(condition, question, check_answer)
 
 
 if __name__ == "__main__":
