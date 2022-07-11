@@ -8,7 +8,7 @@ condition = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def is_prime(number):
     for i in range(number - 1, 1, -1):
-        if not number % i:
+        if not number % i or not number == 1:
             return False
     return True
 
