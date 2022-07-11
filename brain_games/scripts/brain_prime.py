@@ -7,10 +7,10 @@ condition = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number):
-    for i in range(number - 1, 1, -1):
-        if not number % i:
-            return False
-    return True
+    d = 2
+    while number % d != 0:
+        d += 1
+    return d == number
 
 
 def question():
