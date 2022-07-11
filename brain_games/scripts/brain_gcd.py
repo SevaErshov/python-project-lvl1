@@ -15,8 +15,7 @@ def gcd(*args):
 
 
 def question():
-    gcd_list = [1, 2, 3, 4, 5]
-    random_gcd = gcd_list[randint(0, 4)]
+    random_gcd = randint(1, 5)
     first = randint(1, 30) * random_gcd
     second = randint(1, 30) * random_gcd
     answer = gcd(first, second)
