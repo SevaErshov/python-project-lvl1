@@ -1,16 +1,16 @@
-install: #делает поэтри инсталл
+install: 
 	poetry install
 
-build: #poetry build
+build:
 	poetry build
 
-publish: #poetry publish для отладки
+publish:
 	poetry publish --dry-run
 
-package-install: #устанвока пакета в пользовательское окружение
+package-install:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 
-lint: #проверяет линтером brain_games
+lint:
 	poetry run flake8 brain_games
 
  
