@@ -13,7 +13,7 @@ Brain Games is a set of console math games. There are 5 games, work of which you
 Install
 
 ```
-git clone git@github.com:SevaErshov/python-project-lvl1.git
-cd python-project-lvl1
-make package-install
+$ git clone git@github.com:SevaErshov/python-project-lvl1.git
+$ cd python-project-lvl1
+$ make package-install
 ```
